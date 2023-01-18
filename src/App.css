@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
+/*==== Genral Rules ====*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-all {
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*====// Genral Rules //====*/
+/*==== Header ====*/
+header {
+  background-color: #273746;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header-brand {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.cart-icon-notification {
+  position: relative;
+  cursor: pointer;
+}
+.cart-icon {
+  font-size: 35px;
+}
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e74c3c;
+  font-size: 25px;
+  text-align: center;
+  line-height: 30px;
+  padding: 0;
+  transform: translate(75%, -65%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*====// Header //====*/
+
+/*==== Filter ====*/
+
+.filter-size,
+.filter-sort,
+.filer-result {
+  font-size: 25px;
+  text-transform: capitalize;
+  margin: 5px 0;
+  padding: 5px;
+}
+select {
+  padding: 5px;
+  height: 40px;
+  font-size: 17px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+select:hover {
+  border: 3px solid #ddd;
+  padding: 5px;
+  font-size: 20px;
+}
+/*====// Filter //====*/
+
+/*==== Product Card====*/
+
+.product-card {
+  border: 1px solid #ddd;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 10px 5px;
+  padding: 10px;
+  flex-direction: column;
+  cursor: pointer;
+}
+.product-card:hover {
+  padding: 5px;
+  border: 3px solid rgba(0, 0, 0, 0.43);
+  font-size: 17px;
+}
+.product-card-img {
+  width: 90%;
+  background-size: cover;
+}
+.product-card-img:hover {
+  width: 95%;
+}
+.product-card-action {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.product-card-action .add-btn {
+  background-color: #f39c12;
+  padding: 3%;
+  font-size: 100%;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 50%;
+  height: 10%;
+}
+.product-card-action .add-btn:hover {
+  border: 2px solid black;
+  padding: 7px;
+}
+.product-card-action .price {
+  font-size: 20px;
+}
+/*====// Product Card //====*/
+
+/*==== basket ====*/
+
+.basket {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding: 10px;
+  border: 3px solid #ddd;
+}
+.basket:hover {
+  border: 3px solid gray;
+  padding: 15px;
+}
+.basket-none {
+  display: none;
+}
+.basket .remove-all-btn {
+  background-color: brown;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  margin-left: auto;
+  width: 120px;
+  display: block;
+  font-size: 20px;
+}
+.basket .remove-all-btn:hover {
+  padding: 11px;
+  border: 3px solid black;
+}
+.basket-content {
+  display: flex;
+  border: 3px solid #ddd;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 10px 0;
+}
+.basket-body {
+  flex: 1;
+  margin-left: 5px;
+}
+
+.basket-content img {
+  height: 100px;
+}
+.basket-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.basket-quantity {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.basket-quantity > button {
+  border-radius: 50%;
+  height: 30x;
+  width: 30px;
+  line-height: 30px;
+  padding: 0;
+  font-size: 25px;
+}
+.minus-qunatity {
+  background-color: #cacfd2;
+}
+.plus-qunatity {
+  background-color: #cacfd2;
+}
+.basket-quantity > span {
+  font-size: 20px;
+}
+.remove {
+  margin-left: auto;
+  text-align: right;
+}
+.remove-btn {
+  background-color: #ec7063;
+  font-size: 20px;
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  margin: 5px 0 5px auto;
+  display: block;
+}
+/*====// basket //====*/
+
+.alert {
+  position: fixed;
+  right: 0;
+  bottom: 10%;
+  width: 300px;
 }
